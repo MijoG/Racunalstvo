@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	
+	vector<int> vektor1;
+	vektor1.push_back(3);
+	vektor1.push_back(10);
+	vektor1.push_back(33);
+	
+	cout<<"Vektori su: ";
+	
+	for(unsigned int i=0;i<vektor1.size();i++) {
+		cout<<vektor1[i]<< " ";
+	}
+	
+	cout<<endl;
+	
+	if (vektor1.empty()) {
+		cout<<"Vektor 1 je prazan.";
+	}
+	else {
+		cout<<"Vektor 1 nije prazan.";
+	}
+	
+	cout<<endl;
+	
+	vector<int> vektor2;
+	vektor2.push_back(10);
+	
+	if (vektor1.size()!=vektor2.size()) {
+		cout<<"Stari vektor NIJE jednak novom vektoru!";
+	}
+	else {
+		cout<<"Stari vektor jednak je novom vektoru!";
+	}
+	
+	cout<<endl;
+	
+	vektor1=vektor2;
+	
+	if(vektor1.size()!=vektor2.size()) {
+		cout<<"Stari vektor NIJE jedan novom vektoru!";
+	}
+	else {
+		cout<<"Stari vektor jednak je novom vektoru!";
+	}
+	
+	cout<<endl;
+	
+	system("pause");
+	return 0;
+}
